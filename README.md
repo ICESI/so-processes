@@ -15,7 +15,7 @@ En esta guía se presentan algunos comandos útiles para la gestión de servicio
 
 ### Desarrollo
 
-## Script de pruebas
+#### Script de pruebas
 #
 
 ### Preguntas
