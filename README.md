@@ -16,12 +16,18 @@ En esta guía se presentan algunos comandos útiles relacionados con los proceso
 ### Desarrollo
 
 #### Script de pruebas
-#### 
-#### Obtener el identificador de un proceso
-#### Deteniendo un servicio
-#### Deteniendo un servicio por medio de su ID
+#### Cancelando la ejecución de un servicio
+
+#### Parando un servicio
+ctrl + z
 #### Reanundando un servicio
+jobs
 #### Servicios en background
+&
+#### Obtener el identificador de un proceso
+pidof
+#### Deteniendo un servicio por medio de su ID
+kill -9 pid
 #### Systemd y servicios en el arranque
 #### Aplicativo Screen
 
