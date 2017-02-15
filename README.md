@@ -16,7 +16,7 @@ En esta guía se presentan algunos comandos útiles para la gestión de servicio
 ### Desarrollo
 
 ## Script de pruebas
-##
+#
 
 ### Preguntas
 * ¿Cuál es la utilidad de los niveles de ejecución en Linux?, Realice un script que inicie una máquina virtual en el arranque del sistema operativo, adicione comentarios explicando las líneas del script. Muestre evidencias del funcionamiento del script.
