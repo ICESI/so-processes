@@ -10,13 +10,21 @@ Correo: daniel.barragan at correo.icesi.edu.co
 * Implementar scripts que agrupen comandos y parámetros de entrada para la realización de tareas. 
 
 ### Introducción
-Una de las tareas que se presenta con mayor frecuencia en la configuración de sistemas operativos tiene que ver con la gestión de servicios. Estos servicios pueden ser instalados por medio de paquetes o pueden ser creados por el desarrollador.
-En esta guía se presentan algunos comandos útiles para la gestión de servicios en CentOS7.
+Una de las tareas que se presenta con mayor frecuencia en la configuración de sistemas operativos tiene que ver con la detención y reanudación de procesos. Un proceso puede ser instalado por medio del gestor de paquetes o pueden ser creados por el desarrollador.
+En esta guía se presentan algunos comandos útiles relacionados con los procesos.
 
 ### Desarrollo
 
 #### Script de pruebas
-#
+#### 
+#### Obtener el identificador de un proceso
+#### Deteniendo un servicio
+#### Deteniendo un servicio por medio de su ID
+#### Reanundando un servicio
+#### Servicios en background
+#### Systemd y servicios en el arranque
+#### Aplicativo Screen
+
 
 ### Preguntas
 * ¿Cuál es la utilidad de los niveles de ejecución en Linux?, Realice un script que inicie una máquina virtual en el arranque del sistema operativo, adicione comentarios explicando las líneas del script. Muestre evidencias del funcionamiento del script.
