@@ -161,22 +161,28 @@ screen -S terminal_remota
 ```
 Dentro de la sesión de screen presionar **ctrl+a** y luego escribir los comandos
 
-**:multiuser on**  
-**:acladd operativos_client**  
-**:aclchg operativos -w "#"**  
+```
+:multiuser on  
+:acladd operativos_client  
+:aclchg operativos -w "#"  
+```
 
-Desde la máquina B hacer una conexión ssh a la máquina A
+Desde la máquina B no importa en que usuario este activa su sesión, hacer una conexión ssh a la máquina A
 
 ```
-ssh operativos_client@ip_maquina_a
+$ ssh operativos_client@ip_maquina_a
 ```
 Para acceder a la sesión activa debe ejecutar a continuación el comando
 
 ```
-screen -x operativos_server/terminal_remota
+$ screen -x operativos_server/terminal_remota
+```
+Si llega a observar el error **/dev/pts/2 operation not permitted** ejecute el comando
+```
+$ script /dev/null
 ```
 
-Recuerde restauralos los permisos de la máquina A cuando haya terminado
+Recuerde restauralos los permisos de la máquina A cuando haya terminado por motivos de seguridad
 
 ```
 # chmod u-s /usr/bin/screen
