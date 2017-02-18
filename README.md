@@ -56,7 +56,7 @@ $ ./count.sh
 ```
 Cancelar la ejecución del script presione la combinación de teclas ***ctrl+c***
 
-#### Parando un servicio
+#### Deteniendo y reanudando un proceso
 Ejecutar el script
 
 ```
@@ -69,18 +69,24 @@ Digite el siguiente comando para reanudar la ejecución del script
 ```
 $ fg
 ```
-Ejecute el script dos veces y para cada ejecución presione ***ctrl+z***. Ejecute el siguiente 
+
+#### Reanundando una lista de procesos detenidos
+Ejecute el script dos veces y para cada ejecución presione **ctrl+z**. Ejecute el siguiente 
 comando para observar el listado de procesos detenidos
 
 ```
 $ jobs
 ```
-Podra continuar la ejecución de alguno de los procesos por medio del comando **fg** y el identificador de la izquierda
+Podrá continuar la ejecución de alguno de los procesos por medio del comando **fg** y el identificador de la salida del comando jobs
 
-#### Reanundando un servicio
-jobs
-#### Servicios en background
-&
+#### Proceso en background
+Ejecutar el script como se indica a continuación
+
+```
+$ ./count.sh &
+```
+Al presionar la combinación de teclas **ctrl+c** el proceso no se detiene debido a que no se ejecuta en el primer plano. Para traer el proceso al primer plano y cancelarlo digite el comando **fg** seguido de la combinación de teclas **ctrl+c** 
+
 #### Obtener el identificador de un proceso
 pidof
 #### Deteniendo un servicio por medio de su ID
