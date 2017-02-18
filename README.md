@@ -96,9 +96,49 @@ A partir del identificador de un proceso es posible cancelar su ejecución. Supo
 $ kill -9 123
 ```
 
-#### Systemd y servicios en el arranque
 #### Aplicativo Screen
+Ejecute el siguiente comando como el usuario root para realizar la instalación del programa screen: 
+```
+# sudo yum install screen -y 
+```
+Active la sesión del usuario operativos
+```
+# su operativos
+```
+Ejecute el comando screen 
+```
+$ screen
+```
+En la consola que se abre digite el comando para ejecutar el script 
+```
+$ ./count.sh 
+```
+Presione **ctrl+a** y luego la tecla **c** para abrir una nueva consola. Digite nuevamente el comando para ejecutar el script  
+```
+$ ./count.sh 
+```
+Presione **ctrl+a** y luego la tecla **d** para desligarse de las consolas creadas  
+
+Presione el siguiente comando para retomar el control de las consolas
+```
+$ screen -r 
+```
+Presione **ctrl+a** y luego la tecla **d** para desligarse nuevamente de las consolas creadas  
+
+Presione el siguiente comando para abrir una nueva sesión de screen
+```
+$ screen -S nueva_sesion
+```
+Presione **ctrl+a** y luego la tecla **d** para desligarse nuevamente de las consolas creadas  
+
+Presione el siguiente comando para observar las sesiones activas
+```
+$ screen -r 
+```
+
 #### Aplicativo Screen y Pantalla remota
+
+#### Systemd y servicios en el arranque
 
 
 ### Preguntas
