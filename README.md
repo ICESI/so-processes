@@ -138,7 +138,53 @@ $ screen -r
 
 #### Aplicativo Screen y Pantalla remota
 
+En algunas versiones de CentOS7 se requiere hacer lo siguiente en caso de que la conexión por ssh muestre el error: **Permission denied (publickey,gssapi-keyex,gssapi-with-mic).**
+
+```
+# vi /etc/ssh/sshd_config
+PasswordAuthentication yes
+sudo systemctl restart sshd
+```
+Para habilitar el uso multiusuario de screen debera cambiar los siguiente permisos
+
+```
+# chmod u+s /usr/bin/screen
+# chmod 755 /var/run/screen
+```
+
+Para la realización de esta actividad se requieren dos maquinas virtuales de centos conectadas por una red privada o publica. Ambas máquinas virtuales deben tener screen instalado. Una de las máquinas virtuales debe tener dos usuarios creados: el usuario operativos_server y el usuario operativos_client
+
+En la máquina A desde el usuario operativos_server ejecutar
+
+```
+screen -S terminal_remota
+```
+Dentro de la sesión de screen presionar **ctrl+a** y luego escribir los comandos
+
+**:multiuser on**  
+**:acladd operativos_client**  
+**:aclchg operativos -w "#"**  
+
+Desde la máquina B hacer una conexión ssh a la máquina A
+
+```
+ssh operativos_client@ip_maquina_a
+```
+Para acceder a la sesión activa debe ejecutar a continuación el comando
+
+```
+screen -x operativos_server/terminal_remota
+```
+
+Recuerde restauralos los permisos de la máquina A cuando haya terminado
+
+```
+# chmod u-s /usr/bin/screen
+# chmod 775 /var/run/screen
+```
+
 #### Systemd y servicios en el arranque
+
 
 
 ### Preguntas
@@ -148,4 +194,8 @@ $ screen -r
 * ¿Porque es conveniente crear usuarios con perfiles o permisos de acuerdo con cada aplicación en un sistema Linux?
 
 ### Referencias
-http://www.ee.surrey.ac.uk/Teaching/Unix/
+http://www.ee.surrey.ac.uk/Teaching/Unix/  
+https://www.linux.com/learn/using-screen-remote-interaction  
+http://stackoverflow.com/questions/9366707/is-running-gnu-screen-suid-root-the-only-way-to-make-multiuser-mode-work  
+http://unix.stackexchange.com/questions/160523/how-can-i-start-a-screen-session-as-non-root-user
+
