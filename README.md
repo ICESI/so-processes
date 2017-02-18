@@ -45,7 +45,6 @@ Digite los siguientes comandos para asignar permisos de ejecución
 
 ```
 $ chmod +x count.sh
-$ ./count.sh
 ```
 
 #### Cancelando la ejecución de un proceso
@@ -54,16 +53,11 @@ Ejecutar el script
 ```
 $ ./count.sh
 ```
-Cancelar la ejecución del script presione la combinación de teclas ***ctrl+c***
+
+Cancelar la ejecución del script presione la combinación de teclas **ctrl+c**
 
 #### Deteniendo y reanudando un proceso
-Ejecutar el script
-
-```
-$ ./count.sh
-```
-Detener la ejecución del script presione la combinación de teclas ***ctrl+z***
-
+Ejecutar el script. Detener la ejecución del script presione la combinación de teclas **ctrl+z**.
 Digite el siguiente comando para reanudar la ejecución del script
 
 ```
@@ -88,15 +82,27 @@ $ ./count.sh &
 Al presionar la combinación de teclas **ctrl+c** el proceso no se detiene debido a que no se ejecuta en el primer plano. Para traer el proceso al primer plano y cancelarlo digite el comando **fg** seguido de la combinación de teclas **ctrl+c** 
 
 #### Obtener el identificador de un proceso
-pidof
-#### Deteniendo un servicio por medio de su ID
-kill -9 pid
+Ejecutar el script y detenerlo con la combinación de teclas **ctrl+c**. Ejecute el siguiente comando para observar el listado de los procesos
+
+```
+$ ps -auxwww | grep script.sh
+```
+Podra observar en la salida del comando la segunda columna que corresponde al identificador del proceso
+
+#### Deteniendo un proceso por medio de su identificador
+A partir del identificador de un proceso es posible cancelar su ejecución. Suponiendo que el identificador de un proceso es el numéro 123 para cancelar la ejecución del proceso puede ejecutar el siguiente comando
+
+```
+$ kill -9 123
+```
+
 #### Systemd y servicios en el arranque
 #### Aplicativo Screen
 #### Aplicativo Screen y Pantalla remota
 
 
 ### Preguntas
+* ¿Que información proporciona cada una de las columnas del comando ps-auxwww?
 * ¿Cuál es la utilidad de los niveles de ejecución en Linux?, Realice un script que inicie una máquina virtual en el arranque del sistema operativo, adicione comentarios explicando las líneas del script. Muestre evidencias del funcionamiento del script.
 * Investigue acerca de la utilidad del comando visudo. Presente ejemplos y capturas de pantalla. 
 * ¿Porque es conveniente crear usuarios con perfiles o permisos de acuerdo con cada aplicación en un sistema Linux?
