@@ -195,7 +195,6 @@ Para convertir el script count.sh en un servicio digite los comandos que se mues
 ```
 # cd /etc/systemd/system
 # vim count.service
-[root@localhost system]# cat count.service 
 [Unit]
 Description = making network connection up
 [Service]
