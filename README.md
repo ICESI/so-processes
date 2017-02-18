@@ -191,7 +191,34 @@ Recuerde restauralos los permisos de la máquina A cuando haya terminado por mot
 
 #### Systemd y servicios en el arranque
 
+Para convertir el script count.sh en un servicio digite los comandos que se muestran a continuación
+```
+# cd /etc/systemd/system
+# vim count.service
+[root@localhost system]# cat count.service 
+[Unit]
+Description = making network connection up
+[Service]
+ExecStart = /home/operativos/count.sh 
+[Install]
+WantedBy = default.target
+# systemctl enable count.service
+```
 
+Los siguientes comandos permiten gestionar el servicio count.service. Verifique que una vez activado el servicio se puede observar el proceso count.sh en ejecución.
+```
+# systemctl start count.service
+# ls multi-user.target.wants/
+# ps -auxwww | grep count.sh
+# systemctl stop count.service
+# ls multi-user.target.wants/
+# ps -auxwww | grep count.sh
+```
+
+Al realizar cambios en el archivo count.service debera recargar el servicio de systemctl
+```
+# systemctl daemon-reload
+```
 
 ### Preguntas
 * ¿Que información proporciona cada una de las columnas del comando ps-auxwww?
@@ -203,5 +230,6 @@ Recuerde restauralos los permisos de la máquina A cuando haya terminado por mot
 http://www.ee.surrey.ac.uk/Teaching/Unix/  
 https://www.linux.com/learn/using-screen-remote-interaction  
 http://stackoverflow.com/questions/9366707/is-running-gnu-screen-suid-root-the-only-way-to-make-multiuser-mode-work  
-http://unix.stackexchange.com/questions/160523/how-can-i-start-a-screen-session-as-non-root-user
+http://unix.stackexchange.com/questions/160523/how-can-i-start-a-screen-session-as-non-root-user  
+https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/sect-Managing_Services_with_systemd-Unit_Files.html
 
