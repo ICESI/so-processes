@@ -195,9 +195,9 @@ Recuerde restauralos los permisos de la máquina A cuando haya terminado por mot
 
 ### Preguntas
 * ¿Que información proporciona cada una de las columnas del comando ps-auxwww?
-* ¿Cuál es la utilidad de los niveles de ejecución en Linux?, Realice un script que inicie una máquina virtual en el arranque del sistema operativo, adicione comentarios explicando las líneas del script. Muestre evidencias del funcionamiento del script.
-* Investigue acerca de la utilidad del comando visudo. Presente ejemplos y capturas de pantalla. 
 * ¿Porque es conveniente crear usuarios con perfiles o permisos de acuerdo con cada aplicación en un sistema Linux?
+* ¿Cuál es la utilidad de los niveles de ejecución en Linux?
+* (Opcional) Realice un script que inicie una máquina virtual en el arranque del sistema operativo, adicione comentarios explicando las líneas del script. Muestre evidencias del funcionamiento del script.
 
 ### Referencias
 http://www.ee.surrey.ac.uk/Teaching/Unix/  
