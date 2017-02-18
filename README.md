@@ -64,7 +64,18 @@ $ ./count.sh
 ```
 Detener la ejecución del script presione la combinación de teclas ***ctrl+z***
 
-Digite 
+Digite el siguiente comando para reanudar la ejecución del script
+
+```
+$ fg
+```
+Ejecute el script dos veces y para cada ejecución presione ***ctrl+z***. Ejecute el siguiente 
+comando para observar el listado de procesos detenidos
+
+```
+$ jobs
+```
+Podra continuar la ejecución de alguno de los procesos por medio del comando **fg** y el identificador de la izquierda
 
 #### Reanundando un servicio
 jobs
