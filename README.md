@@ -156,7 +156,7 @@ Para habilitar el uso multiusuario de screen debera cambiar los siguiente permis
 # chmod 755 /var/run/screen
 ```
 
-Para la realización de esta actividad se requieren dos maquinas virtuales de centos conectadas por una red privada o publica. Ambas máquinas virtuales deben tener screen instalado. Una de las máquinas virtuales debe tener dos usuarios creados: el usuario operativos_server y el usuario operativos_client
+Para la realización de esta actividad se requieren dos maquinas virtuales de centos conectadas por una red privada o publica. Ambas máquinas virtuales deben tener screen instalado. Una de las máquinas virtuales debe tener dos usuarios creados: el usuario operativos_server y el usuario operativos_client, a esta máquina la llamaremos **máquina A**  
 
 En la máquina A desde el usuario operativos_server ejecutar
 
@@ -168,7 +168,7 @@ Dentro de la sesión de screen presionar **ctrl+a** y luego escribir los comando
 ```
 :multiuser on  
 :acladd operativos_client  
-:aclchg operativos -w "#"  
+:aclchg operativos_client -w "#"  
 ```
 
 Desde la máquina B no importa en que usuario este activa su sesión, hacer una conexión ssh a la máquina A
