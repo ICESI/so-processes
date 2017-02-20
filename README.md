@@ -138,6 +138,7 @@ Presione el siguiente comando para observar las sesiones activas
 ```
 $ screen -r 
 ```
+Podrá ingresar a alguna de las sesiones escribiendo el commando **screen -r** seguido del identificador de 4 dígitos
 
 #### Aplicativo Screen y Pantalla remota
 
