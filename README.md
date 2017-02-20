@@ -118,7 +118,7 @@ Presione **ctrl+a** y luego la tecla **c** para abrir una nueva consola. Digite 
 $ ./count.sh 
 ```
 
-Nota: Podrá ir de una consola a otra presionando **ctrl+a** y luego la tecla **n**
+**Nota:** Podrá ir de una consola a otra presionando **ctrl+a** y luego la tecla **n**
 
 Presione **ctrl+a** y luego la tecla **d** para desligarse de las consolas creadas  
 
