@@ -120,7 +120,7 @@ A continuación se presentan algunos comandos de ejemplo para la restricción de
 _memhogtest.sh_
 ```
 #!/bin/bash
-while True; do memhog 2g; sleep 2; done
+while true; do memhog 2g; sleep 2; done
 ```
 
 _memhogtest.service_
