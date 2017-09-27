@@ -24,7 +24,8 @@ Crear un usuario de nombre operativos y password operativos. Si el usuario ya ex
 
 Instalar el paquete httpd
 ```
-# yum install httpd
+# yum install numactl -y
+# yum install httpd -y
 ```
 
 #### Systemd
