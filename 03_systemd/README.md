@@ -22,6 +22,11 @@ Crear un usuario de nombre operativos y password operativos. Si el usuario ya ex
 # su operativos
 ```
 
+Instalar el paquete httpd
+```
+# yum install httpd
+```
+
 #### Systemd
 Fue escrito por Lennart Poettering con el principal objetivo de unificar las configuraciones básicas de Linux y los comportamientos de servicios en todas las distribuciones. **systemd** es un paquete de software completo, el cual, además del demonio init systemd, incluye a los daemons journald, logind y networkd, junto a otros componentes de bajo nivel. **init systemd** reemplaza el sistema de inicio (init) heredado de los sistemas operativos estilo UNIX System V y Berkeley Software Distribution (BSD)
 
@@ -65,10 +70,10 @@ A través de systemd varios recursos pueden ser restringidos:
 
 | Resource controller | Description |
 |------|------|
-| CPUShares | by default at 1024 |
-| MemoryLimit | by default without limit, value expressed in Megabytes or Gigabytes |
-| BlockIOWeight | by default without limit, value between 10 and 1000 |
-| CPUQuota | it restricts CPU time to the specified percentage, even if the machine is otherwise idle |
+| CPUShares | Por defecto tiene un valor de 1024 |
+| MemoryLimit | Se expresa en unidades de Megabytes o Gigabytes |
+| BlockIOWeight | Se expresa con un valor entre 10 y 1000 |
+| CPUQuota | Restringe la cpu a un porcentaje específico |
 
 A continuación se presentan algunos comandos de ejemplo para la restricción de recursos por medio de CGroups y systemd
 
