@@ -22,9 +22,13 @@ Crear un usuario de nombre operativos y password operativos. Si el usuario ya ex
 # su operativos
 ```
 
-Instalar el paquete httpd
+Instalar el paquete numactl que provee la herramienta para stress de memoria ram llamada memhog
 ```
 # yum install numactl -y
+```
+
+Instalar el paquete httpd
+```
 # yum install httpd -y
 ```
 
