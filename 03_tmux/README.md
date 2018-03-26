@@ -116,6 +116,23 @@ Elimíne la primera consola de la sesión 0 presionando **ctrl+b** y luego la te
 
 Liste las sesiones presionando **ctrl+b** y la tecla **s**. Seleccione la sesión llamada nueva sesión y elimínela.
 
+Puede ajustar las configuraciones de tmux como se muestra a continuación. Algunas personas personalizan tmux con los atajos de vi para no tener que memorizar nuevos comandos. Para que el siguiente cambio tenga efecto debe abandonar la sesión de tmux una vez creado el archivo .tmux.conf e ingresar nuevamente
+
+```
+$ vi ~/.tmux.conf
+# use C-a, since it's on the home row and easier to hit than C-b
+set-option -g prefix C-a
+unbind-key C-a
+bind-key C-a send-prefix
+set -g base-index 1
+
+# Easy config reload
+bind-key R source-file ~/.tmux.conf \; display-message "tmux.conf reloaded."
+
+# vi is good
+setw -g mode-keys vi
+```
+
 ### Preguntas
 * Realice un cuadro comparativo entre la herramienta screen y la herramienta tmux
 
@@ -123,3 +140,4 @@ Liste las sesiones presionando **ctrl+b** y la tecla **s**. Seleccione la sesió
 * https://tmuxcheatsheet.com/
 * https://gist.github.com/henrik/1967800
 * https://gist.github.com/MohamedAlaa/2961058
+* https://gist.github.com/tsl0922/d79fc1f8097dde660b34
