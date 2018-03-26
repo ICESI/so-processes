@@ -45,7 +45,7 @@ Digite el siguiente comando para asignar permisos de ejecución
 $ chmod +x count.sh
 ```
 
-#### Aplicativo Screen
+#### Aplicativo screen
 Ejecute el siguiente comando como el usuario root para realizar la instalación del programa screen:
 ```
 # sudo yum install screen -y
@@ -67,21 +67,23 @@ Presione **ctrl+a** y luego la tecla **c** para abrir una nueva consola. Digite 
 $ ./count.sh
 ```
 
-**Nota:** Podrá ir de una consola a otra presionando **ctrl+a** y luego la tecla **n**
+**Nota:** Podrá ir de una consola a otra presionando **ctrl+a** y luego la tecla **n** ó la tecla **p**
 
-Presione **ctrl+a** y luego la tecla **d** para desligarse de las consolas creadas  
+Todas las consolas que crea con **ctrl+a** + **c** pertenecen a una misma sesión. screen tiene soporte para múltiples sesiones y múltiples consolas por sesión.
 
-Presione el siguiente comando para retomar el control de las consolas
+Presione **ctrl+a** y luego la tecla **d** para desligarse de la sesión creada
+
+Presione el siguiente comando para ingresar de nueva a la sesión
 ```
 $ screen -r
 ```
-Presione **ctrl+a** y luego la tecla **d** para desligarse nuevamente de las consolas creadas  
+Presione **ctrl+a** y luego la tecla **d** para desligarse nuevamente de la sesión
 
 Presione el siguiente comando para abrir una nueva sesión de screen
 ```
 $ screen -S nueva_sesion
 ```
-Presione **ctrl+a** y luego la tecla **d** para desligarse nuevamente de las consolas creadas  
+Presione **ctrl+a** y luego la tecla **d** para desligarse de la sesión  
 
 Presione el siguiente comando para observar las sesiones activas
 ```
@@ -135,7 +137,7 @@ Si llega a observar el error **/dev/pts/2 operation not permitted** ejecute el c
 $ script /dev/null
 ```
 
-Recuerde restauralos los permisos de la máquina A cuando haya terminado por motivos de seguridad
+Recuerde restaurar los los permisos de la máquina A cuando haya terminado por motivos de seguridad
 
 ```
 # chmod u-s /usr/bin/screen
