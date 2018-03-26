@@ -55,29 +55,55 @@ Active la sesión del usuario operativos
 ```
 # su operativos
 ```
+
+Puede ajustar las configuraciones de tmux como se muestra a continuación. Algunas personas personalizan tmux con los atajos de vi para no tener que memorizar nuevos comandos. Para que el siguiente cambio tenga efecto debe abandonar la sesión de tmux una vez creado el archivo .tmux.conf e ingresar nuevamente
+
+```
+$ vi ~/.tmux.conf
+# use C-a, since it's on the home row and easier to hit than C-b
+set-option -g prefix C-a
+unbind-key C-a
+bind-key C-a send-prefix
+set -g base-index 1
+
+# Easy config reload
+bind-key R source-file ~/.tmux.conf \; display-message "tmux.conf reloaded."
+
+# vi is good
+setw -g mode-keys vi
+```
+
 Ejecute el comando tmux
 ```
 $ tmux
 ```
 
-En la consola que se abre digite el comando para ejecutar el script
-```
-$ ./count.sh
-```
-Presione **ctrl+b** y luego la tecla **c** para abrir una nueva consola. Digite nuevamente el comando para ejecutar el script  
-```
-$ ./count.sh
-```
+Nota: tmux tiene soporte para múltiples sesiones y múltiples consolas por sesión como se mostrará a continuación
 
-**Nota:** Podrá ir de una consola a otra presionando **ctrl+b** y luego la tecla **n** ó la tecla **p**.
+#### Comandos
 
-Todas las consolas que crea con **ctrl+b** + **c** pertenecen a una misma sesión. tmux tiene soporte para múltiples sesiones y múltiples consolas por sesión.
+| Comando   | Usuario | Descripción   |
+|------|------|------|
+| --- | operativos | Los siguientes comandos se ejecutan como el usuario operativos |
+| $ ./count.sh | | Ejecute el script de conteo |
+| | | Presione **ctrl+b** y luego la tecla **c** para abrir una nueva consola |
+| | | Ejecute nuevamente el script de conteo |
+| | | Abra una nueva consola |
+| | | Ejecute nuevamente el script de conteo |
+| | | Presione **ctrl+b** y luego la tecla **n** para ir a la consola siguiente |
+| | | Presione **ctrl+b** y luego la tecla **p** para ir a la consola anterior |
+| | | Tenga en cuenta hasta este punto que las consolas creadas pertenecen a una misma sesión |
+| | | Presione **ctrl+b** y luego la tecla **%** para dividir la pantalla verticalmente |
+| | | Presione **ctrl+b** y luego la tecla **"** para dividir la pantalla horizontalmente |
+| | | Presione **ctrl+b** y las teclas de dirección para navegar por los paneles |
+| | | Presione **ctrl+b** y la tecla **q** para visualizar los numeros de identificación de cada panel |
+| | | |
+| | | |
+| | | |
+| | | |
+| | | |
 
-Para crear nuevos paneles en una consola presione **ctrl+b** y luego la tecla **%** ó la tecla **"**.
 
-Para navegar por los paneles presione **ctrl+b** y las teclas de dirección.
-
-Ṕara visualizar los números de los paneles presione **ctrl+b** y la tecla **q**
 
 Para intercambiar el orden de los paneles presione **ctrl+b** y la tecla **o**
 
@@ -116,22 +142,7 @@ Elimíne la primera consola de la sesión 0 presionando **ctrl+b** y luego la te
 
 Liste las sesiones presionando **ctrl+b** y la tecla **s**. Seleccione la sesión llamada nueva sesión y elimínela.
 
-Puede ajustar las configuraciones de tmux como se muestra a continuación. Algunas personas personalizan tmux con los atajos de vi para no tener que memorizar nuevos comandos. Para que el siguiente cambio tenga efecto debe abandonar la sesión de tmux una vez creado el archivo .tmux.conf e ingresar nuevamente
 
-```
-$ vi ~/.tmux.conf
-# use C-a, since it's on the home row and easier to hit than C-b
-set-option -g prefix C-a
-unbind-key C-a
-bind-key C-a send-prefix
-set -g base-index 1
-
-# Easy config reload
-bind-key R source-file ~/.tmux.conf \; display-message "tmux.conf reloaded."
-
-# vi is good
-setw -g mode-keys vi
-```
 
 ### Preguntas
 * Realice un cuadro comparativo entre la herramienta screen y la herramienta tmux
