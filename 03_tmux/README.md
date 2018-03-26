@@ -114,7 +114,8 @@ Nota: tmux tiene soporte para múltiples sesiones y múltiples consolas por sesi
 | **ctrl+b** + **s** | | Lista las sesiones dentro de tmux. Permite seleccionar una sesión e ingresar a ella |
 | | | Desliguese de la sesión |
 | | | Cierre su conexión SSH e ingrese nuevamente |
-| tmux kill-sessions ... | | Elimine las sesiones creadas |
+| tmux kill-sessions -t operativos | | Elimine la sesión de operativos |
+| | | Elimine la sesión de distribuidos |
 
 ### Preguntas
 * Realice un cuadro comparativo entre la herramienta screen y la herramienta tmux
