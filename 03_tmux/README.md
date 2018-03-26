@@ -122,3 +122,4 @@ Liste las sesiones presionando **ctrl+b** y la tecla **s**. Seleccione la sesió
 ### Referencias
 * https://tmuxcheatsheet.com/
 * https://gist.github.com/henrik/1967800
+* https://gist.github.com/MohamedAlaa/2961058
