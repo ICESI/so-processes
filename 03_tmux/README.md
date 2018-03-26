@@ -86,30 +86,23 @@ Nota: tmux tiene soporte para múltiples sesiones y múltiples consolas por sesi
 |------|------|------|
 | --- | operativos | Los siguientes comandos se ejecutan como el usuario operativos |
 | $ ./count.sh | | Ejecute el script de conteo |
-| | | Presione **ctrl+b** y luego la tecla **c** para abrir una nueva consola |
+| **ctrl+b** + **c**| | Abra una nueva consola |
 | | | Ejecute nuevamente el script de conteo |
 | | | Abra una nueva consola |
 | | | Ejecute nuevamente el script de conteo |
-| | | Presione **ctrl+b** y luego la tecla **n** para ir a la consola siguiente |
-| | | Presione **ctrl+b** y luego la tecla **p** para ir a la consola anterior |
+| **ctrl+b** + **n** | | Va a la consola siguiente |
+| **ctrl+b** + **p** | | Va a la consola anterior |
 | | | Tenga en cuenta hasta este punto que las consolas creadas pertenecen a una misma sesión |
-| | | Presione **ctrl+b** y luego la tecla **%** para dividir la pantalla verticalmente |
-| | | Presione **ctrl+b** y luego la tecla **"** para dividir la pantalla horizontalmente |
-| | | Presione **ctrl+b** y las teclas de dirección para navegar por los paneles |
-| | | Presione **ctrl+b** y la tecla **q** para visualizar los numeros de identificación de cada panel |
-| | | |
-| | | |
-| | | |
-| | | |
+| **ctrl+b** + **%** | | Dividir la pantalla verticalmente |
+| **ctrl+b** + **"** | | Dividir la pantalla horizontalmente |
+| **ctrl+b** + **->** | | Navegar por los paneles, use las flechas de dirección |
+| **ctrl+b** + **q** | | Visualizar los numeros de identificación de cada panel |
+| **ctrl+b** + **o** | | Navegar por los paneles secuencialmente |
+| **ctrl+b** + **x** | | Cerrar uno de los paneles |
+| **ctrl+b** + **d** | | Desligarse de la sesión creada, las consolas se continuan ejecutando en background |
+| tmux list-sessions | | |
 | | | |
 
-
-
-Para intercambiar el orden de los paneles presione **ctrl+b** y la tecla **o**
-
-Para cerrar un panel presione **ctrl+b** y la tecla **x**.
-
-Presione **ctrl+b** y luego la tecla **d** para desligarse de la sesión creada, las consolas permanecerán ejecutandose en background.
 
 Presione el siguiente comando para ingresar de nueva a la sesión
 ```
