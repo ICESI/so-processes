@@ -2,7 +2,7 @@
 Universidad ICESI  
 Curso: Sistemas Operativos  
 Docente: Daniel Barragán C.  
-Tema: Introducción al uso de tmux
+Tema: Introducción al uso de tmux  
 Correo: daniel.barragan at correo.icesi.edu.co   
 
 ### Objetivos
