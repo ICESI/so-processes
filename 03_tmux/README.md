@@ -95,7 +95,7 @@ Nota: tmux tiene soporte para múltiples sesiones y múltiples consolas por sesi
 | | | Tenga en cuenta hasta este punto que las consolas creadas pertenecen a una misma sesión |
 | **ctrl+a** + **%** | | Dividir la pantalla verticalmente |
 | **ctrl+a** + **"** | | Dividir la pantalla horizontalmente |
-| **ctrl+a** + **->** | | Navegar por los paneles, use las flechas de dirección |
+| **ctrl+a** + **arrow keys** | | Navegar por los paneles, use las flechas de dirección |
 | **ctrl+a** + **q** | | Visualizar los numeros de identificación de cada panel |
 | **ctrl+a** + **o** | | Navegar por los paneles secuencialmente |
 | **ctrl+a** + **x** | | Cerrar uno de los paneles |
@@ -114,7 +114,7 @@ Nota: tmux tiene soporte para múltiples sesiones y múltiples consolas por sesi
 | **ctrl+a** + **s** | | Lista las sesiones dentro de tmux. Permite seleccionar una sesión e ingresar a ella |
 | | | Desliguese de la sesión |
 | | | Cierre su conexión SSH e ingrese nuevamente |
-| tmux kill-sessions -t operativos | | Elimine la sesión de operativos |
+| tmux kill-session -t operativos | | Elimine la sesión de operativos |
 | | | Elimine la sesión de distribuidos |
 
 ### Preguntas
