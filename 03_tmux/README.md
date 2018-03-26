@@ -56,7 +56,7 @@ Active la sesión del usuario operativos
 # su operativos
 ```
 
-Puede ajustar las configuraciones de tmux como se muestra a continuación. Algunas personas personalizan tmux con los atajos de vi para no tener que memorizar nuevos comandos. Para que el siguiente cambio tenga efecto debe abandonar la sesión de tmux una vez creado el archivo .tmux.conf e ingresar nuevamente
+Puede ajustar configuraciones como la edición de la salida de comandos con vi ó la combinación de teclas para ejecutar una acción a través de un archivo de configuración llamado .tmux.conf. Algunas personas personalizan tmux con los atajos de vi para no tener que memorizar nuevos comandos. 
 
 ```
 $ vi ~/.tmux.conf
@@ -73,18 +73,12 @@ bind-key R source-file ~/.tmux.conf \; display-message "tmux.conf reloaded."
 setw -g mode-keys vi
 ```
 
-Ejecute el comando tmux
-```
-$ tmux
-```
-
-Nota: tmux tiene soporte para múltiples sesiones y múltiples consolas por sesión como se mostrará a continuación
-
 #### Comandos
 
 | Comando   | Usuario | Descripción   |
 |------|------|------|
 | --- | operativos | Los siguientes comandos se ejecutan como el usuario operativos |
+| $ tmux | | Ejecuta el aplicativo tmux |
 | $ ./count.sh | | Ejecute el script de conteo |
 | **ctrl+a** + **c**| | Abra una nueva consola |
 | | | Ejecute nuevamente el script de conteo |
@@ -116,6 +110,8 @@ Nota: tmux tiene soporte para múltiples sesiones y múltiples consolas por sesi
 | | | Cierre su conexión SSH e ingrese nuevamente |
 | tmux kill-session -t operativos | | Elimine la sesión de operativos |
 | | | Elimine la sesión de distribuidos |
+
+Nota: Hemos visto con las instrucciones anteriores que tmux tiene soporte para múltiples sesiones y múltiples consolas por sesión.
 
 ### Preguntas
 * Realice un cuadro comparativo entre la herramienta screen y la herramienta tmux
