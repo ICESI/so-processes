@@ -100,42 +100,21 @@ Nota: tmux tiene soporte para múltiples sesiones y múltiples consolas por sesi
 | **ctrl+b** + **o** | | Navegar por los paneles secuencialmente |
 | **ctrl+b** + **x** | | Cerrar uno de los paneles |
 | **ctrl+b** + **d** | | Desligarse de la sesión creada, las consolas se continuan ejecutando en background |
-| tmux list-sessions | | |
-| | | |
-
-
-Presione el siguiente comando para ingresar de nueva a la sesión
-```
-$ tmux list-sessions
-0: 1 windows (created Sun Mar 25 22:26:57 2018) [162x47]
-$ tmux attach-session -t 0
-```
-Presione **ctrl+b** y luego la tecla **d** para desligarse nuevamente de la sesión
-
-Presione el siguiente comando para abrir una nueva sesión de screen
-```
-$ tmux new-session -s nueva_sesion
-```
-Presione **ctrl+a** y luego la tecla **d** para desligarse de la sesión
-
-Presione el siguiente comando para observar las sesiones activas
-```
-$ tmux list-sessions
-0: 1 windows (created Sun Mar 25 22:26:57 2018) [162x47]
-nueva_sesion: 1 windows (created Sun Mar 25 22:40:21 2018) [162x47]
-```
-
-Ingrese a la sesión 0 y cree dos consolas nuevas
-
-Renombre la sesión 0 presionando **ctrl+b** y luego la tecla **$**.
-
-Renombre la primera consola de la sesión 0 presionando **ctrl+b** y luego la tecla **,**.
-
-Elimíne la primera consola de la sesión 0 presionando **ctrl+b** y luego la tecla **&** . Confirme la eliminación presionando **y** . Al eliminar una consola se cierran tambien los paneles abiertos.
-
-Liste las sesiones presionando **ctrl+b** y la tecla **s**. Seleccione la sesión llamada nueva sesión y elimínela.
-
-
+| tmux list-sessions | | Lista las sesiones de tmux |
+| tmux attach-session -t 0 | | Se enlaza con la sesión 0 |
+| | | Desliguese de la sesión |
+| $ tmux new-session -s operativos | | Cree una sesión llamada operativos |
+| | | Desliguese de la sesión |
+| | | Liste las sesiones de tmux |
+| | | Ingrese en la sesión con identificador 0 |
+| | | Cree dos consolas nuevas |
+| **ctrl+b** + **$** | | Renombre la sesión 0 a distribuidos|
+| **ctrl+b** + **,** | | Renombre las consolas como workshop1 y workshop2 respectivamente |
+| **ctrl+b** + **&** | | Elimine una de las consolas, debe confirmar la eliminación presionando la tecla **y**.  Al eliminar una consola se cierran tambien los paneles abiertos. |
+| **ctrl+b** + **s** | | Lista las sesiones dentro de tmux. Permite seleccionar una sesión e ingresar a ella |
+| | | Desliguese de la sesión |
+| | | Cierre su conexión SSH e ingrese nuevamente |
+| tmux kill-sessions ... | | Elimine las sesiones creadas |
 
 ### Preguntas
 * Realice un cuadro comparativo entre la herramienta screen y la herramienta tmux
