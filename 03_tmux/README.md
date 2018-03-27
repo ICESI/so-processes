@@ -71,6 +71,9 @@ bind-key R source-file ~/.tmux.conf \; display-message "tmux.conf reloaded."
 
 # vi is good
 setw -g mode-keys vi
+
+# Setup 'v' to begin selection as in Vim
+bind-key -Tcopy-mode-vi v send -X begin-selection
 ```
 
 #### Comandos
@@ -123,7 +126,7 @@ Nota: Hemos visto con las instrucciones anteriores que tmux tiene soporte para m
 | **enter** | | Copie la selección |
 | **q** | | Salga del modo vi |
 | **ctrl+a** + **]** | | Pegue la selección |
-| | | Investigue como pegar la selección en el editor vi |
+| | | Investigue como pegar la selección en el editor vi, esto requiere cambios en el .tmux.conf |
 
 ### Preguntas
 * Realice un cuadro comparativo entre la herramienta screen y la herramienta tmux
