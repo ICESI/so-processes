@@ -63,20 +63,20 @@ Active la sesión del usuario operativos
 | --- | operativos | Los siguientes comandos se ejecutan como el usuario operativos |
 | $ tmux | | Ejecuta el aplicativo tmux |
 | $ ./count.sh | | Ejecute el script de conteo |
-| **ctrl+a** + **c**| | Abra una nueva consola |
+| **ctrl+b** + **c**| | Abra una nueva consola |
 | | | Ejecute nuevamente el script de conteo |
 | | | Abra una nueva consola |
 | | | Ejecute nuevamente el script de conteo |
-| **ctrl+a** + **n** | | Va a la consola siguiente |
-| **ctrl+a** + **p** | | Va a la consola anterior |
+| **ctrl+b** + **n** | | Va a la consola siguiente |
+| **ctrl+b** + **p** | | Va a la consola anterior |
 | | | Tenga en cuenta hasta este punto que las consolas creadas pertenecen a una misma sesión |
-| **ctrl+a** + **%** | | Dividir la pantalla verticalmente |
-| **ctrl+a** + **"** | | Dividir la pantalla horizontalmente |
-| **ctrl+a** + **arrow keys** | | Navegar por los paneles, use las flechas de dirección |
-| **ctrl+a** + **q** | | Visualizar los numeros de identificación de cada panel |
-| **ctrl+a** + **o** | | Navegar por los paneles secuencialmente |
-| **ctrl+a** + **x** | | Cerrar uno de los paneles |
-| **ctrl+a** + **d** | | Desligarse de la sesión creada, las consolas se continuan ejecutando en background |
+| **ctrl+b** + **%** | | Dividir la pantalla verticalmente |
+| **ctrl+b** + **"** | | Dividir la pantalla horizontalmente |
+| **ctrl+b** + **arrow keys** | | Navegar por los paneles, use las flechas de dirección |
+| **ctrl+b** + **q** | | Visualizar los numeros de identificación de cada panel |
+| **ctrl+b** + **o** | | Navegar por los paneles secuencialmente |
+| **ctrl+b** + **x** | | Cerrar uno de los paneles |
+| **ctrl+b** + **d** | | Desligarse de la sesión creada, las consolas se continuan ejecutando en background |
 | tmux list-sessions | | Lista las sesiones de tmux |
 | tmux attach-session -t 0 | | Se enlaza con la sesión 0 |
 | | | Desliguese de la sesión |
@@ -85,10 +85,10 @@ Active la sesión del usuario operativos
 | | | Liste las sesiones de tmux |
 | | | Ingrese en la sesión con identificador 0 |
 | | | Cree dos consolas nuevas |
-| **ctrl+a** + **$** | | Renombre la sesión 0 a distribuidos|
-| **ctrl+a** + **,** | | Renombre las consolas como workshop1 y workshop2 respectivamente |
-| **ctrl+a** + **&** | | Elimine una de las consolas, debe confirmar la eliminación presionando la tecla **y**.  Al eliminar una consola se cierran tambien los paneles abiertos. |
-| **ctrl+a** + **s** | | Lista las sesiones dentro de tmux. Permite seleccionar una sesión e ingresar a ella |
+| **ctrl+b** + **$** | | Renombre la sesión 0 a distribuidos|
+| **ctrl+b** + **,** | | Renombre las consolas como workshop1 y workshop2 respectivamente |
+| **ctrl+b** + **&** | | Elimine una de las consolas, debe confirmar la eliminación presionando la tecla **y**.  Al eliminar una consola se cierran tambien los paneles abiertos. |
+| **ctrl+b** + **s** | | Lista las sesiones dentro de tmux. Permite seleccionar una sesión e ingresar a ella |
 | | | Desliguese de la sesión |
 | | | Cierre su conexión SSH e ingrese nuevamente |
 | tmux kill-session -t operativos | | Elimine la sesión de operativos |
@@ -122,10 +122,9 @@ Para que la configuración tenga efecto debe salir de tmux e ingresar nuevamente
 
 - Cambiar la combinación de teclas **ctrl+a** por **ctrl+b** 
 - Aplicar las configuraciones realizadas en el archivo .tmux.conf sin reiniciar tmux
-- Editar un comando ingresado en modo vi
 - Seleccionar y copiar texto de la salida estandar
 
-#### Comandos modo vi
+#### Configuración personalizada - Modo Copia (vi)
 
 | Comando   | Usuario | Descripción   |
 |------|------|------|
