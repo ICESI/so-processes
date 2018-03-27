@@ -110,6 +110,11 @@ setw -g mode-keys vi
 | | | Cierre su conexión SSH e ingrese nuevamente |
 | tmux kill-session -t operativos | | Elimine la sesión de operativos |
 | | | Elimine la sesión de distribuidos |
+| **ctrl+a** + **[** | | Entre en modo vi |
+| **space key** | | Seleccione alguna palabra de la salida de comandos |
+| **enter** | | Copie la selección |
+| **q** | | Salga del modo vi |
+| **ctrl+a** + **]** | | Pegue la selección |
 
 Nota: Hemos visto con las instrucciones anteriores que tmux tiene soporte para múltiples sesiones y múltiples consolas por sesión.
 
@@ -121,3 +126,4 @@ Nota: Hemos visto con las instrucciones anteriores que tmux tiene soporte para m
 * https://gist.github.com/henrik/1967800
 * https://gist.github.com/MohamedAlaa/2961058
 * https://gist.github.com/tsl0922/d79fc1f8097dde660b34
+* https://superuser.com/questions/196060/selecting-text-in-tmux-copy-mode
