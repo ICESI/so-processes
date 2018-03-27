@@ -110,13 +110,20 @@ setw -g mode-keys vi
 | | | Cierre su conexión SSH e ingrese nuevamente |
 | tmux kill-session -t operativos | | Elimine la sesión de operativos |
 | | | Elimine la sesión de distribuidos |
+
+Nota: Hemos visto con las instrucciones anteriores que tmux tiene soporte para múltiples sesiones y múltiples consolas por sesión.
+
+#### Comandos modo vi
+
+| Comando   | Usuario | Descripción   |
+|------|------|------|
+| $ ls /bin | | Liste los archivos del directorio /bin |
 | **ctrl+a** + **[** | | Entre en modo vi |
-| **space key** | | Seleccione alguna palabra de la salida de comandos |
+| **space key** | | Seleccione el nombre de algun archivo de la salida del listado |
 | **enter** | | Copie la selección |
 | **q** | | Salga del modo vi |
 | **ctrl+a** + **]** | | Pegue la selección |
-
-Nota: Hemos visto con las instrucciones anteriores que tmux tiene soporte para múltiples sesiones y múltiples consolas por sesión.
+| | | Investigue como pegar la selección en el editor vi |
 
 ### Preguntas
 * Realice un cuadro comparativo entre la herramienta screen y la herramienta tmux
