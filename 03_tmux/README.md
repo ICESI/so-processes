@@ -56,26 +56,6 @@ Active la sesión del usuario operativos
 # su operativos
 ```
 
-Puede ajustar configuraciones como la edición de la salida de comandos con vi ó la combinación de teclas para ejecutar una acción a través de un archivo de configuración llamado .tmux.conf. Algunas personas personalizan tmux con los atajos de vi para no tener que memorizar nuevos comandos. 
-
-```
-$ vi ~/.tmux.conf
-# use C-a, since it's on the home row and easier to hit than C-b
-set-option -g prefix C-a
-unbind-key C-a
-bind-key C-a send-prefix
-set -g base-index 1
-
-# Easy config reload
-bind-key R source-file ~/.tmux.conf \; display-message "tmux.conf reloaded."
-
-# vi is good
-setw -g mode-keys vi
-
-# Setup 'v' to begin selection as in Vim
-bind-key -Tcopy-mode-vi v send -X begin-selection
-```
-
 #### Comandos
 
 | Comando   | Usuario | Descripción   |
@@ -115,6 +95,35 @@ bind-key -Tcopy-mode-vi v send -X begin-selection
 | | | Elimine la sesión de distribuidos |
 
 Nota: Hemos visto con las instrucciones anteriores que tmux tiene soporte para múltiples sesiones y múltiples consolas por sesión.
+
+#### Configuración personalizada
+
+Puede ajustar configuraciones como la edición de la salida de comandos con vi ó la combinación de teclas para ejecutar una acción a través de un archivo de configuración llamado .tmux.conf. Algunas personas personalizan tmux con los atajos de vi para no tener que memorizar nuevos comandos. 
+
+```
+$ vi ~/.tmux.conf
+# use C-a, since it's on the home row and easier to hit than C-b
+set-option -g prefix C-a
+unbind-key C-a
+bind-key C-a send-prefix
+set -g base-index 1
+
+# Easy config reload
+bind-key R source-file ~/.tmux.conf \; display-message "tmux.conf reloaded."
+
+# vi is good
+setw -g mode-keys vi
+
+# Setup 'v' to begin selection as in Vim
+bind-key -Tcopy-mode-vi v send -X begin-selection
+```
+
+Para que la configuración tenga efecto debe salir de tmux e ingresar nuevamente. La nueva configuración le permitirá hacer lo siguiente:
+
+- Cambiar la combinación de teclas **ctrl+a** por **ctrl+b** 
+- Aplicar las configuraciones realizadas en el archivo .tmux.conf sin reiniciar tmux
+- Editar un comando ingresado en modo vi
+- Seleccionar y copiar texto de la salida estandar
 
 #### Comandos modo vi
 
