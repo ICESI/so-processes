@@ -134,10 +134,10 @@ Para que la configuración tenga efecto debe salir de tmux e ingresar nuevamente
 | **enter** | | Copie la selección |
 | **q** | | Salga del modo vi |
 | **ctrl+a** + **]** | | Pegue la selección |
-| | | Investigue como pegar la selección en el editor vi, esto requiere cambios en el .tmux.conf |
 
 ### Preguntas
 * Realice un cuadro comparativo entre la herramienta screen y la herramienta tmux
+* Investigue como pegar la selección del modo copia en algún editor de texto como vi o nano, tenga en cuenta que esto requiere cambios en el .tmux.conf para enviar el texto copiado al portapapeles
 
 ### Referencias
 * https://tmuxcheatsheet.com/
