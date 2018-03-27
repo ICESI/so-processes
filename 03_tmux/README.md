@@ -130,6 +130,7 @@ Nota: Hemos visto con las instrucciones anteriores que tmux tiene soporte para m
 
 ### Referencias
 * https://tmuxcheatsheet.com/
+* https://github.com/tmux/tmux/blob/master/CHANGES#L235
 * https://gist.github.com/henrik/1967800
 * https://gist.github.com/MohamedAlaa/2961058
 * https://gist.github.com/tsl0922/d79fc1f8097dde660b34
