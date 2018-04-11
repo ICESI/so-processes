@@ -87,12 +87,15 @@ $ screen -r
 
 Presione el siguiente comando para ingresar a una de las sesiones creadas
 ```
-$ screen -r PID (identificador de la sesión)
+$ screen -r PID (identificador de la sesión de cuatro dígitos)
 ```
 
 Presione **ctrl+a** y luego la tecla **d** para desligarse de la sesión
 
-**Nota**: Recuerde que puede ingresar a alguna de las sesiones escribiendo el commando **screen -r** seguido del identificador de 4 dígitos
+Digite el siguiente comando para terminar una sesion 
+```
+$ screen -S PID -X quit
+```
 
 #### Aplicativo Screen y Pantalla remota
 
