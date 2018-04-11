@@ -54,9 +54,9 @@ Active la sesión del usuario operativos
 ```
 # su operativos
 ```
-Ejecute el comando screen
+Ejecute el comando screen para crear una sesion llamada icesi_sesion
 ```
-$ screen
+$ screen -S icesi_sesion
 ```
 En la consola que se abre digite el comando para ejecutar el script
 ```
