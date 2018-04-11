@@ -71,25 +71,28 @@ $ ./count.sh
 
 Todas las consolas que crea con **ctrl+a** + **c** pertenecen a una misma sesión. screen tiene soporte para múltiples sesiones y múltiples consolas por sesión.
 
-Presione **ctrl+a** y luego la tecla **d** para desligarse de la sesión creada
+Presione **ctrl+a** y luego la tecla **d** para desligarse de la sesión creada  
 
-Presione el siguiente comando para ingresar de nueva a la sesión
+Presione el siguiente comando para crear una nueva sesión llamada icesi_new_sesion
+```
+$ screen -S icesi_new_sesion
+```
+
+Presione **ctrl+a** y luego la tecla **d** para desligarse de la sesión creada 
+
+Presione el siguiente comando para listar las sesiones creadas
 ```
 $ screen -r
 ```
-Presione **ctrl+a** y luego la tecla **d** para desligarse nuevamente de la sesión
 
-Presione el siguiente comando para abrir una nueva sesión de screen
+Presione el siguiente comando para ingresar a una de las sesiones creadas
 ```
-$ screen -S nueva_sesion
+$ screen -r PID (identificador de la sesión)
 ```
-Presione **ctrl+a** y luego la tecla **d** para desligarse de la sesión  
 
-Presione el siguiente comando para observar las sesiones activas
-```
-$ screen -r
-```
-Podrá ingresar a alguna de las sesiones escribiendo el commando **screen -r** seguido del identificador de 4 dígitos
+Presione **ctrl+a** y luego la tecla **d** para desligarse de la sesión
+
+**Nota**: Recuerde que puede ingresar a alguna de las sesiones escribiendo el commando **screen -r** seguido del identificador de 4 dígitos
 
 #### Aplicativo Screen y Pantalla remota
 
