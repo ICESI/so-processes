@@ -75,7 +75,8 @@ Active la sesión del usuario operativos
 | **ctrl+b** + **arrow keys** | | Navegar por los paneles, use las flechas de dirección |
 | **ctrl+b** + **q** | | Visualizar los numeros de identificación de cada panel |
 | **ctrl+b** + **o** | | Navegar por los paneles secuencialmente |
-| **ctrl+b** + **z** | | Expandir panel |
+| **ctrl+b** + **z** | | Expandir panel / Contraer panel |
+| **ctrl+b** + **t** | | Muestra un reloj, presione q para salir |
 | **ctrl+b** + **x** | | Cerrar uno de los paneles |
 | **ctrl+b** + **d** | | Desligarse de la sesión creada, las consolas se continuan ejecutando en background |
 | tmux list-sessions | | Lista las sesiones de tmux |
@@ -90,6 +91,7 @@ Active la sesión del usuario operativos
 | **ctrl+b** + **,** | | Renombre las consolas como workshop1 y workshop2 respectivamente |
 | **ctrl+b** + **&** | | Elimine una de las consolas, debe confirmar la eliminación presionando la tecla **y**.  Al eliminar una consola se cierran tambien los paneles abiertos. |
 | **ctrl+b** + **s** | | Lista las sesiones dentro de tmux. Permite seleccionar una sesión e ingresar a ella |
+| **ctrl+b** + **?** | | Despliega los atajos de tmux, presione q para salir |
 | | | Desliguese de la sesión |
 | | | Cierre su conexión SSH e ingrese nuevamente |
 | tmux kill-session -t operativos | | Elimine la sesión de operativos |
