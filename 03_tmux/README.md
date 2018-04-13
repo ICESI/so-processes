@@ -75,10 +75,11 @@ Active la sesión del usuario operativos
 | **ctrl+b** + **arrow keys** | | Navegar por los paneles, use las flechas de dirección |
 | **ctrl+b** + **q** | | Visualizar los numeros de identificación de cada panel |
 | **ctrl+b** + **o** | | Navegar por los paneles secuencialmente |
+| **ctrl+b** + **z** | | Expandir panel |
 | **ctrl+b** + **x** | | Cerrar uno de los paneles |
 | **ctrl+b** + **d** | | Desligarse de la sesión creada, las consolas se continuan ejecutando en background |
 | tmux list-sessions | | Lista las sesiones de tmux |
-| tmux attach-session -t 0 | | Se enlaza con la sesión 0 |
+| tmux attach-session -t 0 | | Se enlaza con la sesión 0, puede emplear este comando tambien para compartir sesiones de forma remota |
 | | | Desliguese de la sesión |
 | $ tmux new-session -s operativos | | Cree una sesión llamada operativos |
 | | | Desliguese de la sesión |
@@ -94,7 +95,13 @@ Active la sesión del usuario operativos
 | tmux kill-session -t operativos | | Elimine la sesión de operativos |
 | | | Elimine la sesión de distribuidos |
 
-Nota: Hemos visto con las instrucciones anteriores que tmux tiene soporte para múltiples sesiones y múltiples consolas por sesión.
+Al escribir tmux seguido de una letra, se visualizarán los posibles argumentos de tmux que comienzan por dicha letra
+```
+$ tmux l
+ambiguous command: l, could be: last-pane, last-window, link-window, list-buffers, list-clients, list-commands, list-keys, list-panes, list-sessions, list-windows, load-buffer, lock-client, lock-server, lock-session
+```
+
+Nota: Hemos visto con las instrucciones anteriores que tmux tiene soporte para múltiples sesiones y múltiples consolas por sesión.  
 
 #### Configuración personalizada
 
@@ -146,3 +153,4 @@ Para que la configuración tenga efecto debe salir de tmux e ingresar nuevamente
 * https://gist.github.com/MohamedAlaa/2961058
 * https://gist.github.com/tsl0922/d79fc1f8097dde660b34
 * https://superuser.com/questions/196060/selecting-text-in-tmux-copy-mode
+* https://www.howtoforge.com/sharing-terminal-sessions-with-tmux-and-screen
