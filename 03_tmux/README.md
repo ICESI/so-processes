@@ -73,6 +73,7 @@ Active la sesión del usuario operativos
 | **ctrl+b** + **%** | | Dividir la pantalla verticalmente |
 | **ctrl+b** + **"** | | Dividir la pantalla horizontalmente |
 | **ctrl+b** + **arrow keys** | | Navegar por los paneles, use las flechas de dirección |
+| **ctrl+b** + **alt+arrow keys** | | Redimensiona los paneles, use las flechas de dirección |
 | **ctrl+b** + **q** | | Visualizar los numeros de identificación de cada panel |
 | **ctrl+b** + **o** | | Navegar por los paneles secuencialmente |
 | **ctrl+b** + **z** | | Expandir panel / Contraer panel |
