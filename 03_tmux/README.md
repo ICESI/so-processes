@@ -145,6 +145,48 @@ Para que la configuración tenga efecto debe salir de tmux e ingresar nuevamente
 | **q** | | Salga del modo vi |
 | **ctrl+a** + **]** | | Pegue la selección |
 
+### Plugins (Tmux Plugin Manager)
+
+Clone el siguiente repositorio:
+
+```
+$ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+```
+
+Adicione al archivo de configuración de tmux lo siguiente (aquí he adicionado
+algunos plugins ademas de tpm):
+
+```
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+
+# Other examples:
+# set -g @plugin 'github_username/plugin_name'
+# set -g @plugin 'git@github.com/user/plugin'
+# set -g @plugin 'git@bitbucket.com/user/plugin'
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run -b '~/.tmux/plugins/tpm/tpm'
+```
+
+Para terminar la instalación ejecute en la terminal lo siguiente:
+```
+# type this in terminal if tmux is already running
+$ tmux source ~/.tmux.conf
+```
+
+| Comando   | Usuario | Descripción   |
+|------|------|------|
+| **ctrl+b** + **I** | | Instala un plugin |
+| **ctrl+b** + **U** | | Actualiza un plugin |
+| **ctrl+b** + **alt+u** | | Elimina un plugin |
+| **ctrl+b** + **ctrl+s** | | Salva la configuración de la sesion actual |
+| **ctrl+b** + **ctrl+r** | | Restaura la configuración de la sesion anterior |
+
 ### Preguntas
 * Realice un cuadro comparativo entre la herramienta screen y la herramienta tmux
 * Investigue como pegar la selección del modo copia en algún editor de texto como vi o nano, tenga en cuenta que esto requiere cambios en el .tmux.conf para enviar el texto copiado al portapapeles
@@ -157,3 +199,4 @@ Para que la configuración tenga efecto debe salir de tmux e ingresar nuevamente
 * https://gist.github.com/tsl0922/d79fc1f8097dde660b34
 * https://superuser.com/questions/196060/selecting-text-in-tmux-copy-mode
 * https://www.howtoforge.com/sharing-terminal-sessions-with-tmux-and-screen
+* https://github.com/tmux-plugins/tpm
