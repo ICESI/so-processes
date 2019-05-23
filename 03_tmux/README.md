@@ -130,7 +130,7 @@ bind-key -Tcopy-mode-vi v send -X begin-selection
 
 Para que la configuración tenga efecto debe salir de tmux e ingresar nuevamente. La nueva configuración le permitirá hacer lo siguiente:
 
-- Cambiar la combinación de teclas **ctrl+a** por **ctrl+b** 
+- Note que a partir de este momento cualquier comando que aparezca con la combinación de teclas **ctrl+a** debera cambiarla por **ctrl+b** (C-b)
 - Aplicar las configuraciones realizadas en el archivo .tmux.conf sin reiniciar tmux
 - Seleccionar y copiar texto de la salida estandar
 
@@ -139,11 +139,11 @@ Para que la configuración tenga efecto debe salir de tmux e ingresar nuevamente
 | Comando   | Usuario | Descripción   |
 |------|------|------|
 | $ ls /bin | | Liste los archivos del directorio /bin |
-| **ctrl+a** + **[** | | Entre en modo vi |
+| **ctrl+b** + **[** | | Entre en modo vi |
 | **space key** | | Seleccione el nombre de algun archivo de la salida del listado |
 | **enter** | | Copie la selección |
 | **q** | | Salga del modo vi |
-| **ctrl+a** + **]** | | Pegue la selección |
+| **ctrl+b** + **]** | | Pegue la selección |
 
 ### Plugins (Tmux Plugin Manager)
 
